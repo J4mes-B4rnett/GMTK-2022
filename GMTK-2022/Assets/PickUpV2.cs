@@ -20,18 +20,26 @@ public class PickUpV2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ObjectDetected == true)
+        if (Input.GetKey("e") && ObjectDetected == true)
         {
             Object.transform.parent = PlayerTransform;
             Object.transform.position = HoldPoint.position;
+        }
+        else if (Input.GetKeyUp("e")) 
+        {
+            Object.transform.parent = null; 
         }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Object = collision.gameObject;
-        ObjectDetected = true;
+        if (collision.gameObject.CompareTag("Collectible")) 
+        {
+            Object = collision.gameObject;
+            ObjectDetected = true;
+        }
+       
     }
 
 }
