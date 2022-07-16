@@ -5,14 +5,14 @@ using UnityEngine;
 public class Pizza : MonoBehaviour
 {
     [Header("Ingredients")]
-    [SerializeField] List<string> toppings = new List<string>();
-    [SerializeField] string sauce = "";
+    [SerializeField] public List<string> toppings = new List<string>();
+    [SerializeField] public string sauce = "";
 
     [Header("Pizza Rating")]
     [SerializeField]
-    int rating = 100;
+    public float rating = 100;
     [SerializeField]
-    int cooked = 0;
+    public float cooked = 0;
     // Start is called before the first frame update
     void Start()
     {
