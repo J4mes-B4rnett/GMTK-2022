@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bffe2e827831de54ab41de81bfa414f7
+guid: 8d9ad233516d27a4ebeed8290e2f2cde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_chef_up-Sheet_0
+      name: spr_chef_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d05cda50ef866041820760cb731f02f
-      internalID: 1797513399
+      spriteID: bd68458f6fc76be49a8f092efde25fa2
+      internalID: 1512515987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_chef_up-Sheet_1
+      name: spr_chef_right_1
       rect:
         serializedVersion: 2
         x: 11
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cc3559acb74dad47a8c6a37d5bc193b
-      internalID: 1621650196
+      spriteID: a0998d58ecdaa4f4989614a5bd893199
+      internalID: 2111750666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_chef_up-Sheet_2
+      name: spr_chef_right_2
       rect:
         serializedVersion: 2
         x: 22
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a04ea275a765eee4cb1a21dd85f3d9a5
-      internalID: -1201932148
+      spriteID: af80e920e35ce6c46a7307b905089b9a
+      internalID: -1367680990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_chef_up-Sheet_3
+      name: spr_chef_right_3
       rect:
         serializedVersion: 2
         x: 33
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 152a63c65a4d500468195d82a098aa11
-      internalID: 822928588
+      spriteID: f61be00fcae284b489398b5a87b00603
+      internalID: 201537383
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_chef_up-Sheet_1: 1621650196
-      spr_chef_up-Sheet_0: 1797513399
-      spr_chef_up-Sheet_3: 822928588
-      spr_chef_up-Sheet_2: -1201932148
+      spr_chef_right_2: -1367680990
+      spr_chef_right_3: 201537383
+      spr_chef_right_0: 1512515987
+      spr_chef_right_1: 2111750666
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

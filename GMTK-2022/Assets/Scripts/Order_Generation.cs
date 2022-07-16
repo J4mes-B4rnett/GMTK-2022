@@ -89,9 +89,4 @@ public class Order_Generation : MonoBehaviour
         order += "!";
         return order;
     }
-
-    public void Start()
-    {
-        print(OrderString(OrderGenerator(3)));
-    }
 }

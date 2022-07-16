@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9753df53dcec31545975e1aec91c09e2
+guid: d369efe75953fc54f9fe71f80f48b24d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_chef_left-right-Sheet_0
+      name: spr_chef_left_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 11
         height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f04115d3a83b24c8477026db0ec709
-      internalID: 1150712030
+      spriteID: f7a86d1503fc95d4ba33fe9967b97184
+      internalID: 45258538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_chef_left-right-Sheet_1
+      name: spr_chef_left_1
       rect:
         serializedVersion: 2
         x: 11
         y: 0
         width: 11
         height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97bc8180ef4d1364ab4499a94fd06913
-      internalID: -2013026539
+      spriteID: e13de2a9f8ffc4a49be47b130e1339a9
+      internalID: -1560386756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_chef_left-right-Sheet_2
+      name: spr_chef_left_2
       rect:
         serializedVersion: 2
         x: 22
         y: 0
         width: 11
         height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d4db1c7a2ebcf46b91f6e89e0740e3
-      internalID: -1732627428
+      spriteID: aec8c1b498db50f4e89cc2d5a0604cf5
+      internalID: 358029671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_chef_left-right-Sheet_3
+      name: spr_chef_left_3
       rect:
         serializedVersion: 2
         x: 33
         y: 0
         width: 11
         height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3c0cfb44a1134e428afe9813345ca7d
-      internalID: 1825441823
+      spriteID: 3c7935d77c32c4d45b9fb94227d09816
+      internalID: 843191139
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_chef_left-right-Sheet_3: 1825441823
-      spr_chef_left-right-Sheet_0: 1150712030
-      spr_chef_left-right-Sheet_2: -1732627428
-      spr_chef_left-right-Sheet_1: -2013026539
+      spr_chef_left_2: 358029671
+      spr_chef_left_1: -1560386756
+      spr_chef_left_3: 843191139
+      spr_chef_left_0: 45258538
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
