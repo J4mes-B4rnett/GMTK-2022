@@ -38,7 +38,7 @@ public class Order_Generation : MonoBehaviour
         }
     }
     
-    List<string> OrderGenerator(int ingredientCount)
+    public List<string> GenerateOrder(int ingredientCount)
     {
         List<string> ingredients;
         ingredients = new List<String>();
@@ -67,7 +67,7 @@ public class Order_Generation : MonoBehaviour
         return ingredients;
     }
 
-    string OrderString(List<string> ingredients)
+    public string OrderString(List<string> ingredients)
     {
         string order = "Hello, I would like ";
         if (Int32.Parse(ingredients[0]) > 1)
