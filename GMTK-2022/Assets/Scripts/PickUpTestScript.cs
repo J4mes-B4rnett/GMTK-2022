@@ -9,6 +9,7 @@ public class PickUpTestScript : MonoBehaviour
     public Vector3 HoldDirection { get; set; }
     public GameObject itemHolding;
 
+
     void Update()
     {
         if (Input.GetKeyDown("e"))
@@ -31,6 +32,9 @@ public class PickUpTestScript : MonoBehaviour
 
             }
         }
-
     }
+
 }
+
+
+    
