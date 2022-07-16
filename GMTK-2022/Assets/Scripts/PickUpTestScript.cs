@@ -7,7 +7,7 @@ public class PickUpTestScript : MonoBehaviour
     public Transform holdSpot;
     public LayerMask pickUpMask;
     public Vector3 HoldDirection { get; set; }
-    private GameObject itemHolding;
+    public GameObject itemHolding;
 
     void Update()
     {
