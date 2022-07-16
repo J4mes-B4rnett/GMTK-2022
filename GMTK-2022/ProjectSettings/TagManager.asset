@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerTag
+  - Collectible
   layers:
   - Default
   - TransparentFX
