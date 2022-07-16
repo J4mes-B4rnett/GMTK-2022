@@ -1,6 +1,6 @@
 ﻿pepperoni
-mozzarella 
-parmesan 
+mozzarella
+parmigiano 
 chestnut mushrooms
 ham strips
 anchovies
