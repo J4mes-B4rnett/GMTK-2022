@@ -13,6 +13,7 @@ public class Pizza : MonoBehaviour
     public float rating = 100;
     [SerializeField]
     public float cooked = 0;
+    public bool doneCooking = false;
     // Start is called before the first frame update
     void Start()
     {
