@@ -22,10 +22,12 @@ public class PickUpTestScript : MonoBehaviour
             else
             {
                 Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position + HoldDirection, .4f, pickUpMask);
-                itemHolding = pickUpItem.gameObject;
-                itemHolding.transform.position = holdSpot.position;
-                itemHolding.transform.parent = transform;
-            
+                if (pickUpItem)
+                {
+                    itemHolding = pickUpItem.gameObject;
+                    itemHolding.transform.position = holdSpot.position;
+                    itemHolding.transform.parent = transform;
+                }
 
             }
         }
