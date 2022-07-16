@@ -59,8 +59,9 @@ public class Oven : MonoBehaviour
             pizza.cooked += pizzaCookSpeed * Time.deltaTime;
 
             Debug.Log("Pizza is being cooked, boys! " + pizza.cooked);
-            if(pizza.cooked <= 100)
+            if(pizza.cooked >= 100 && !pizza.doneCooking)
             {
+                pizza.doneCooking = true;
                 alert.Play();
                 // Make noise, flash oven, alert player somehow
             }
