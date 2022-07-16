@@ -6,13 +6,14 @@ public class Oven : MonoBehaviour
 {
     Pizza pizza;
     bool isFullyCooked = false;
-    // Start is called before the first frame update
+
+    private AudioSource alert;
+
     void Start()
     {
-        
+        alert = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (pizza)
@@ -21,6 +22,7 @@ public class Oven : MonoBehaviour
 
             if(pizza.cooked <= 100)
             {
+                alert.Play();
                 // Make noise, flash oven, alert player somehow
             }
         }
