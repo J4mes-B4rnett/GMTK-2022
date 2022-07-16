@@ -12,6 +12,8 @@ public class Oven : MonoBehaviour
     GameObject item;
     Pizza pizza;
     bool isFullyCooked = false;
+    [SerializeField]
+    bool isDebugging = false;
 
     private AudioSource alert;
 
@@ -25,6 +27,8 @@ public class Oven : MonoBehaviour
     {
         // Get player distance
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
+
+        if(isDebugging)
         Debug.Log("Player Distance: " + playerDistance);
 
         // if player is within range and presses space, take item
@@ -33,6 +37,8 @@ public class Oven : MonoBehaviour
             // check player for held item
             this.item = chefPickup.itemHolding;
             chefPickup.itemHolding = null;
+
+            if (isDebugging)
             Debug.Log("We have an item in the oven!");
         }
 
@@ -42,13 +48,17 @@ public class Oven : MonoBehaviour
             if (item.GetComponent<Pizza>())
             {
                 this.pizza = this.item.GetComponent<Pizza>();
+
+                if (isDebugging)
                 Debug.Log("THE ITEM IS A PIZZA TOO!");
             }
             else
             {
                 // destroy item
                 this.item = null;
-                Debug.Log("Ope, it wasn't a pizza. You burned it.");
+
+                if (isDebugging)
+                    Debug.Log("Ope, it wasn't a pizza. You burned it.");
             }
         }
 
@@ -58,7 +68,9 @@ public class Oven : MonoBehaviour
         {
             pizza.cooked += pizzaCookSpeed * Time.deltaTime;
 
-            Debug.Log("Pizza is being cooked, boys! " + pizza.cooked);
+            if (isDebugging)
+                Debug.Log("Pizza is being cooked, boys! " + pizza.cooked);
+
             if(pizza.cooked >= 100 && !pizza.doneCooking)
             {
                 pizza.doneCooking = true;

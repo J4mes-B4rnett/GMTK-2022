@@ -32,6 +32,12 @@ public class PickUpV2 : MonoBehaviour
 
     }
 
+    public void SetNewPickup(GameObject myObject)
+    {
+        Object = myObject;
+        ObjectDetected = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Collectible")) 
