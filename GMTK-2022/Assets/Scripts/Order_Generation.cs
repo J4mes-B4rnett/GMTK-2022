@@ -66,27 +66,4 @@ public class Order_Generation : MonoBehaviour
         ingredients.Add(newIngredient); ;
         return ingredients;
     }
-
-    public string OrderString(List<string> ingredients)
-    {
-        string order = "Hello, I would like ";
-        if (Int32.Parse(ingredients[0]) > 1)
-        {
-            for (var i = 0; i < Int32.Parse(ingredients[0]); i++)
-            {
-                order += ingredients[i + 1] + ", ";
-            }
-        }
-        else
-        {
-            order += ingredients[1];
-        }
-
-        order += "& ";
-        order += ingredients[Int32.Parse(ingredients[0]) + 1];
-        order += " - and please ";
-        order += ingredients[Int32.Parse(ingredients[0]) + 2];
-        order += "!";
-        return order;
-    }
 }
