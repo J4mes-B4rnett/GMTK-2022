@@ -8,6 +8,9 @@ public class Rent_Manager : MonoBehaviour
     public int day = 0;
     public int difficulty = 1;
 
+    public int totalRentPayed;
+    string previousRentString = "";
+
     public int rentCost = 100;
     public int rentPayed = 0;
 
@@ -21,12 +24,21 @@ public class Rent_Manager : MonoBehaviour
     
     void Update()
     {
+
         if (rentPayed > rentCost)
         {
             IncrementDay();
         }
 
+
         GetComponent<TextMeshProUGUI>().text = "£" + (rentCost - rentPayed).ToString() + " rent due";
+
+        if (GetComponent<TextMeshProUGUI>().text != previousRentString)
+        {
+            totalRentPayed += rentPayed;
+        }
+
+        previousRentString = GetComponent<TextMeshProUGUI>().text;
     }
 
     public void NextPizza()

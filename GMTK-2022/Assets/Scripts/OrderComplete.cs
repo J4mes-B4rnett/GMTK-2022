@@ -14,6 +14,12 @@ public class OrderComplete : MonoBehaviour
     [SerializeField] int pizzaSaucePenalty = 10;
     [SerializeField] int pizzaBoxPenalty = 50;
 
+    public int totalSuccessfulPizzas = 0;
+    public int totalPizzasCompleted = 0;
+    public int totalRentPayed = 0;
+    public int totalDays = 0;
+    public int finalDifficulty = 0;
+
     [SerializeField] float interactionDistance = 1f;
 
 
@@ -86,6 +92,18 @@ public class OrderComplete : MonoBehaviour
             {
                 pizza.rating -= pizzaBoxPenalty;
             }
+
+
+            if(pizza.rating >= 80)
+            {
+                totalSuccessfulPizzas++;
+            }
+            totalPizzasCompleted++;
+
+            totalRentPayed = GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().totalRentPayed;
+            totalDays = GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().day;
+            finalDifficulty = GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().difficulty;
+
 
             GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().rentPayed += pizza.rating * 2;
             GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().NextPizza();
