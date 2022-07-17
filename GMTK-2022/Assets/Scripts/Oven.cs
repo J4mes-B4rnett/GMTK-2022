@@ -74,13 +74,14 @@ public class Oven : MonoBehaviour
         if (pizza)
         {
             pizza.cooked += pizzaCookSpeed * Time.deltaTime;
+            pizza.doneCooking = true;
+
 
             if (isDebugging)
                 Debug.Log("Pizza is being cooked, boys! " + pizza.cooked);
 
             if(pizza.cooked >= 100 && !pizza.doneCooking)
             {
-                pizza.doneCooking = true;
                 alert.Play();
                 // Make noise, flash oven, alert player somehow
             }
@@ -89,6 +90,7 @@ public class Oven : MonoBehaviour
             {
                 timer = 0;
                 // Set boxed pizza
+
                 GameObject cookedPizza = Instantiate(pizzaToppings).gameObject;
                 cookedPizza.GetComponent<Pizza>().SetPizza(pizza);
                 chefPickup.SetNewPickup(cookedPizza);

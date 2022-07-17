@@ -47,8 +47,11 @@ public class PizzaMat : MonoBehaviour
             // TODO this logic probably needs reworked. Object should NOT be pizza but SHOULD be ingredient.
             else if (pizza && playerDistance <= interactionDistance && chefPickup.heldObject && !chefPickup.heldObject.GetComponent<Pizza>())
             {
-                this.pizza.AddIngredient(this.chefPickup.heldObject);
-                chefPickup.ClearOldPickup(this.chefPickup.heldObject);
+                if(!this.pizza.doneCooking)
+                {
+                    this.pizza.AddIngredient(this.chefPickup.heldObject);
+                    chefPickup.ClearOldPickup(this.chefPickup.heldObject);
+                }
             }
             else if(!chefPickup.heldObject && playerDistance <= interactionDistance)
             {
