@@ -10,6 +10,8 @@ public class PizzaMat : MonoBehaviour
     PickUpV2 chefPickup;
     GameObject item;
     Pizza pizza;
+    [SerializeField]
+    float interactionDistance = 1f;
 
     [SerializeField]
     bool isDebugging = false;
@@ -23,25 +25,42 @@ public class PizzaMat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDebugging)
+        {
+            OnDrawGizmos();
+        }
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
-        if (playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject.GetComponent<Pizza>())
+        if(Input.GetKeyDown(KeyCode.E))
         {
-            // check player for held item
-            this.item = chefPickup.heldObject;
-            chefPickup.ClearOldPickup(this.item);
-            this.item.transform.position = pizzaSpot.position;
-            this.pizza = this.item.GetComponent<Pizza>();
+            if (playerDistance <= interactionDistance && chefPickup.heldObject && chefPickup.heldObject.GetComponent<Pizza>())
+            {
+                // check player for held item
+                this.item = chefPickup.heldObject;
+                chefPickup.ClearOldPickup(this.item);
+                this.item.transform.position = pizzaSpot.position;
+                this.pizza = this.item.GetComponent<Pizza>();
 
-            if (isDebugging)
-                Debug.Log("There is a pizza on the mat.");
+                if (isDebugging)
+                    Debug.Log("There is a pizza on the mat.");
+            }
+            // TODO this logic probably needs reworked. Object should NOT be pizza but SHOULD be ingredient.
+            else if (pizza && playerDistance <= interactionDistance && chefPickup.heldObject && !chefPickup.heldObject.GetComponent<Pizza>())
+            {
+                this.pizza.AddIngredient(this.chefPickup.heldObject);
+                chefPickup.ClearOldPickup(this.chefPickup.heldObject);
+            }
+            else if(!chefPickup.heldObject && playerDistance <= interactionDistance)
+            {
+                chefPickup.SetNewPickup(this.pizza.gameObject);
+            }
         }
 
-        // TODO this logic probably needs reworked. Object should NOT be pizza but SHOULD be ingredient.
-        if(Input.GetKeyDown(KeyCode.E) && pizza && playerDistance <= 1 && !chefPickup.heldObject.GetComponent<Pizza>())
-        {
-            this.pizza.AddIngredient(this.chefPickup.heldObject);
-            chefPickup.ClearOldPickup(this.chefPickup.heldObject);
-        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, interactionDistance);
     }
 }

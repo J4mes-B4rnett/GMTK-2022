@@ -17,6 +17,7 @@ public class Pizza : MonoBehaviour
     [SerializeField]
     public float cooked = 0;
     public bool doneCooking = false;
+    public bool isBoxed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,5 +43,15 @@ public class Pizza : MonoBehaviour
             this.toppings.Add(ingredient.gameObject.name.Substring(0, ingredient.gameObject.name.IndexOf('(')));
             GameObject.Destroy(ingredient.gameObject);
         }
+    }
+
+    public void SetPizza(Pizza pizza)
+    {
+        this.Equals(pizza);
+    }
+
+    public void SetBoxed(bool passedBool)
+    {
+        this.isBoxed = passedBool;
     }
 }

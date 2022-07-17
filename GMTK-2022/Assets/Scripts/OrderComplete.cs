@@ -12,6 +12,7 @@ public class OrderComplete : MonoBehaviour
     Pizza pizza;
     [SerializeField] int pizzaToppingPenalty = 5;
     [SerializeField] int pizzaSaucePenalty = 10;
+    [SerializeField] int pizzaBoxPenalty = 30;
 
     [SerializeField]
     bool isDebugging = false;
@@ -31,7 +32,7 @@ public class OrderComplete : MonoBehaviour
 
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
-        if (playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject.GetComponent<Pizza>())
+        if (playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject && chefPickup.heldObject.GetComponent<Pizza>())
         {
             pizza = chefPickup.heldObject.GetComponent<Pizza>();
             // Compare to NPC order
@@ -49,11 +50,17 @@ public class OrderComplete : MonoBehaviour
                 pizza.rating -= pizzaSaucePenalty;
             }
 
+            if(!pizza.isBoxed)
+            {
+                pizza.rating -= pizzaBoxPenalty;
+            }
+
             if (isDebugging)
                 Debug.Log("Your pizza's score was " + pizza.rating + "!");
 
-            chefPickup.ClearOldPickup(pizza.gameObject);
-            GameObject.Destroy(pizza);
+            GameObject temp = chefPickup.heldObject;
+            chefPickup.ClearOldPickup(chefPickup.heldObject);
+            GameObject.Destroy(temp);
         }
     }
 }
