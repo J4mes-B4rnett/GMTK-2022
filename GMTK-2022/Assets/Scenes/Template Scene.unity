@@ -6170,7 +6170,7 @@ GameObject:
   - component: {fileID: 1105107286}
   - component: {fileID: 1105107287}
   m_Layer: 0
-  m_Name: NPC Spawner
+  m_Name: NPCSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7570,12 +7570,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6160181339420233285, guid: bc2aadc97a2be3f44ab2cc99ef245baf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160181339420233285, guid: bc2aadc97a2be3f44ab2cc99ef245baf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160181339420233285, guid: bc2aadc97a2be3f44ab2cc99ef245baf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -193.4
+      value: 466
       objectReference: {fileID: 0}
     - target: {fileID: 6160181339420233285, guid: bc2aadc97a2be3f44ab2cc99ef245baf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 215.5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6160181339420233285, guid: bc2aadc97a2be3f44ab2cc99ef245baf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9475,7 +9483,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7778336, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

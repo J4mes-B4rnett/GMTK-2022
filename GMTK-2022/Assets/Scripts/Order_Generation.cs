@@ -40,6 +40,7 @@ public class Order_Generation : MonoBehaviour
     
     public List<string> GenerateOrder(int ingredientCount)
     {
+        GameObject.Find("NPCSpawner").GetComponent<NPC_Manager>().spawnNewNPC = true;
         List<string> ingredients;
         ingredients = new List<String>();
         ingredients.Add((ingredientCount).ToString());
