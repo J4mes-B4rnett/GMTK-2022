@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Pizza : MonoBehaviour
 {
@@ -18,13 +19,14 @@ public class Pizza : MonoBehaviour
     public float cooked = 0;
     public bool doneCooking = false;
     public bool isBoxed = false;
-    // Start is called before the first frame update
+
+    private Order_Handling _orderHandler;
+    
     void Start()
     {
-        
+        _orderHandler = GameObject.FindObjectOfType<Order_Handling>().GetComponent<Order_Handling>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // If gameobject is ingredient and ingredient is prepped, add to pizza.
@@ -38,8 +40,18 @@ public class Pizza : MonoBehaviour
     {
         if(ingredient.CompareTag("Topping"))
         {
-            if (isDebugging)
-                Debug.Log("You have added " + ingredient.gameObject.name + " to your pizza!");
+            //if (isDebugging)
+                //Debug.Log("You have added " + ingredient.gameObject.name + " to your pizza!");
+            for (int i = 0; i < _orderHandler.toppings.Count; i++)
+            {
+                print("Ingredient 1: " + ingredient.gameObject.name);
+                print("Ingredient 2: " + _orderHandler.toppingsText[i].text);
+                if ((ingredient.gameObject.name).Remove(ingredient.gameObject.name.Length - 7) == _orderHandler.toppingsText[i].text)
+                {
+                    _orderHandler.toppings[i] = true;
+                    print("Set topping to true");
+                }
+            }
             this.toppings.Add(ingredient.gameObject.name.Substring(0, ingredient.gameObject.name.IndexOf('(')));
             GameObject.Destroy(ingredient.gameObject);
         }
