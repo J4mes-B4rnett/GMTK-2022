@@ -10,9 +10,9 @@ public class OrderComplete : MonoBehaviour
     [SerializeField]
     Order_Handling order;
     Pizza pizza;
-    [SerializeField] int pizzaToppingPenalty = 5;
+    [SerializeField] int pizzaToppingPenalty = 8;
     [SerializeField] int pizzaSaucePenalty = 10;
-    [SerializeField] int pizzaBoxPenalty = 30;
+    [SerializeField] int pizzaBoxPenalty = 50;
 
     [SerializeField] float interactionDistance = 1f;
 
@@ -86,6 +86,9 @@ public class OrderComplete : MonoBehaviour
             {
                 pizza.rating -= pizzaBoxPenalty;
             }
+
+            GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().rentPayed += pizza.rating * 2;
+            GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().NextPizza();
 
             if (isDebugging)
                 Debug.Log("Your pizza's score was " + pizza.rating + "!");

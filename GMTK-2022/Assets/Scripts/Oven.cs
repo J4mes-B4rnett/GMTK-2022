@@ -17,6 +17,8 @@ public class Oven : MonoBehaviour
     [SerializeField] Pizza pizzaToppings;
     float timer = 0;
 
+    private bool playedDing = false;
+
     private AudioSource alert;
 
     void Start()
@@ -34,12 +36,10 @@ public class Oven : MonoBehaviour
         // if player is within range and presses space, take item
         if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
         {
+            playedDing = false;
             // check player for held item
             this.item = chefPickup.heldObject;
             chefPickup.ClearOldPickup(this.item);
-
-            if (isDebugging)
-            Debug.Log("We have an item in the oven!");
             timer = 0;
         }
 
@@ -49,41 +49,32 @@ public class Oven : MonoBehaviour
             if (item.GetComponent<Pizza>())
             {
                 this.pizza = this.item.GetComponent<Pizza>();
-
+                this.item.transform.Translate(new Vector2(10000, 10000));
                 item = null;
-                GameObject.Destroy(this.item);
-
-
-                if (isDebugging)
-                Debug.Log("THE ITEM IS A PIZZA TOO!");
+                Destroy(this.item);
             }
             else
             {
                 // destroy item
                 item = null;
-                GameObject.Destroy(this.item);
-
-
-                if (isDebugging)
-                    Debug.Log("Ope, it wasn't a pizza. You burned it.");
+                Destroy(this.item);
             }
         }
 
-        Debug.Log(pizza);
         // If item is pizza, cook pizza
         if (pizza)
         {
             pizza.cooked += pizzaCookSpeed * Time.deltaTime;
+            print(pizza.cooked);
             pizza.doneCooking = true;
 
-
-            if (isDebugging)
-                Debug.Log("Pizza is being cooked, boys! " + pizza.cooked);
-
-            if(pizza.cooked >= 100 && !pizza.doneCooking)
+            if(pizza.cooked >= 100 && pizza.doneCooking)
             {
-                alert.Play();
-                // Make noise, flash oven, alert player somehow
+                if (!playedDing)
+                {
+                    playedDing = true;
+                    alert.Play();
+                }
             }
 
             if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && !chefPickup.heldObject && timer >= .25f)

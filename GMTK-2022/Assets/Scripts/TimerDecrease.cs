@@ -7,11 +7,10 @@ public class TimerDecrease : MonoBehaviour
 {
 
     private Image TimeBarImage;
-    public float MaxTime = 60f;
+    public float MaxTime = 120f;
     public float CurrentTime;
     public bool TimeIsDone = false;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         TimeBarImage = GetComponent<Image>();
@@ -23,9 +22,12 @@ public class TimerDecrease : MonoBehaviour
     {
       if (CurrentTime > 0)
       {
-            CurrentTime -= 1 * Time.deltaTime;
-            TimeBarImage.fillAmount = CurrentTime / MaxTime;
+          CurrentTime -= 1 * Time.deltaTime;
+          TimeBarImage.fillAmount = CurrentTime / MaxTime;
       }
-
+      else
+      {
+          // Game Over
+      }
     }
 }

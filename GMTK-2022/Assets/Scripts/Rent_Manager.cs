@@ -11,8 +11,11 @@ public class Rent_Manager : MonoBehaviour
     public int rentCost = 100;
     public int rentPayed = 0;
 
+    [SerializeField] private TextMeshProUGUI dayString;
+
     void Start()
     {
+        NextPizza();
         IncrementDay();
     }
     
@@ -22,18 +25,25 @@ public class Rent_Manager : MonoBehaviour
         {
             IncrementDay();
         }
+
+        GetComponent<TextMeshProUGUI>().text = "£" + (rentCost - rentPayed).ToString() + " rent due";
+    }
+
+    public void NextPizza()
+    {
+        GameObject.FindObjectOfType<Order_Handling>().GetComponent<Order_Handling>().NewOrder(difficulty);    
     }
     
     void IncrementDay()
     {
-        GameObject.FindObjectOfType<Order_Handling>().GetComponent<Order_Handling>().NewOrder(difficulty);
         day += 1;
+        rentPayed = 0;
         rentCost = 100 + (day * 25);
         if (day % 2 == 0 && difficulty < 4) // If this is an even day and the difficulty is less than 4, increase the number of ingredients
         {
             difficulty += 1;
         }
 
-        GetComponent<TextMeshProUGUI>().text = "Day " + day.ToString();
+        dayString.text = "Day " + day.ToString();
     }
 }

@@ -14,7 +14,7 @@ public class Pizza : MonoBehaviour
 
     [Header("Pizza Rating")]
     [SerializeField]
-    public float rating = 100;
+    public int rating = 100;
     [SerializeField]
     public float cooked = 0;
     public bool doneCooking = false;
