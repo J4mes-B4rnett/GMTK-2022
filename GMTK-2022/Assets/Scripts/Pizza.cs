@@ -14,7 +14,7 @@ public class Pizza : MonoBehaviour
 
     [Header("Pizza Rating")]
     [SerializeField]
-    public float rating = 100;
+    public int rating = 100;
     [SerializeField]
     public float cooked = 0;
     public bool doneCooking = false;
@@ -42,15 +42,20 @@ public class Pizza : MonoBehaviour
         {
             if (isDebugging)
                 print("You have added " + ingredient.gameObject.name + " to your pizza!");
-            for (int i = 0; i < _orderHandler.toppings.Count; i++)
+            for (int i = 0; i < (_orderHandler.toppings.Count); i++)
             {
                 print("Ingredient 1: " + ingredient.gameObject.name);
                 print("Ingredient 2: " + _orderHandler.toppingsText[i].text);
-                if ((ingredient.gameObject.name).Remove(ingredient.gameObject.name.Length - 7) == _orderHandler.toppingsText[i].text)
+                if ((ingredient.gameObject.name).Remove(ingredient.gameObject.name.Length - 7).ToLower() == _orderHandler.toppingsText[i].text.ToLower())
                 {
                     _orderHandler.toppings[i] = true;
                     print("Set topping to true");
                 }
+            }
+
+            if (ingredient.gameObject.name.Remove(ingredient.gameObject.name.Length - 7) == _orderHandler.sauceText.text.ToLower())
+            {
+                _orderHandler.sauce = true;
             }
             this.toppings.Add(ingredient.gameObject.name.Substring(0, ingredient.gameObject.name.IndexOf('(')));
             GameObject.Destroy(ingredient.gameObject);

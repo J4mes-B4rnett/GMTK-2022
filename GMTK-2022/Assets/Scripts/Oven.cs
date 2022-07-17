@@ -14,6 +14,12 @@ public class Oven : MonoBehaviour
     [SerializeField]
     bool isDebugging = false;
     [SerializeField] float interactionDistance = .4f;
+    [SerializeField] Pizza pizzaToppings;
+    float timer = 0;
+    [SerializeField]
+    GameObject alertEx;
+
+    private bool playedDing = false;
 
     private AudioSource alert;
 
@@ -27,19 +33,16 @@ public class Oven : MonoBehaviour
     {
         // Get player distance
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
-
-        if (isDebugging)
-            OnDrawGizmos();
+        timer += 1 * Time.deltaTime;
 
         // if player is within range and presses space, take item
-        if(playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
+        if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
         {
+            playedDing = false;
             // check player for held item
             this.item = chefPickup.heldObject;
             chefPickup.ClearOldPickup(this.item);
-
-            if (isDebugging)
-            Debug.Log("We have an item in the oven!");
+            timer = 0;
         }
 
         // Check if item is pizza
@@ -48,34 +51,46 @@ public class Oven : MonoBehaviour
             if (item.GetComponent<Pizza>())
             {
                 this.pizza = this.item.GetComponent<Pizza>();
-
-                if (isDebugging)
-                Debug.Log("THE ITEM IS A PIZZA TOO!");
+                this.item.transform.Translate(new Vector2(10000, 10000));
+                item = null;
+                Destroy(this.item);
             }
             else
             {
                 // destroy item
-                this.item = null;
-
-                if (isDebugging)
-                    Debug.Log("Ope, it wasn't a pizza. You burned it.");
+                item = null;
+                Destroy(this.item);
             }
         }
-
 
         // If item is pizza, cook pizza
         if (pizza)
         {
             pizza.cooked += pizzaCookSpeed * Time.deltaTime;
+            print(pizza.cooked);
+            pizza.doneCooking = true;
 
-            if (isDebugging)
-                Debug.Log("Pizza is being cooked, boys! " + pizza.cooked);
-
-            if(pizza.cooked >= 100 && !pizza.doneCooking)
+            if(pizza.cooked >= 100 && pizza.doneCooking)
             {
-                pizza.doneCooking = true;
-                alert.Play();
-                // Make noise, flash oven, alert player somehow
+                if (!playedDing)
+                {
+                    playedDing = true;
+                    alert.Play();
+                    alertEx.SetActive(true);
+                }
+            }
+
+            if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && !chefPickup.heldObject && timer >= .25f)
+            {
+                timer = 0;
+                // Set boxed pizza
+
+                GameObject cookedPizza = Instantiate(pizzaToppings).gameObject;
+                cookedPizza.GetComponent<Pizza>().SetPizza(pizza);
+                chefPickup.SetNewPickup(cookedPizza);
+                alertEx.SetActive(false);
+
+                this.pizza = null;
             }
         }
     }

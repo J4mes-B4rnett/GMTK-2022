@@ -4,7 +4,7 @@ parmesan
 mushrooms
 ham
 anchovies
-bell peppers
+bell pepper
 garlic
 pineapple
 sweetcorn

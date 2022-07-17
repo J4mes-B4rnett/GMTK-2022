@@ -15,17 +15,10 @@ public class Order_Handling : MonoBehaviour
     public bool sauce;
     public bool attribute;
     
-    [SerializeField] private int _difficulty;
-
     [Header("Text properties")] 
     [SerializeField] private TextMeshProUGUI attributeText;
     public  TextMeshProUGUI sauceText;
     public List<TextMeshProUGUI> toppingsText;
-
-    void Start()
-    {
-        NewOrder();
-    }
 
     void Update()
     {
@@ -51,8 +44,9 @@ public class Order_Handling : MonoBehaviour
         }
     }
     
-    void NewOrder()
+    public void NewOrder(int _difficulty)
     {
+        GameObject.FindObjectOfType<NPC_Manager>().GetComponent<NPC_Manager>().spawnNewNPC = true;
         order = orderGenerator.GenerateOrder(_difficulty);
 
         attributeText.fontStyle = FontStyles.Normal;

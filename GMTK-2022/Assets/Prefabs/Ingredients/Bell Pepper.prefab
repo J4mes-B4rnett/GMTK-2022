@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1072109795502181079}
   - component: {fileID: -7026859307381728822}
   m_Layer: 7
-  m_Name: Bell Pepper
-  m_TagString: Collectible
+  m_Name: bell pepper
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
