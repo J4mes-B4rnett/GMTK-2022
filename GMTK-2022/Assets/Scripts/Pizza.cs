@@ -46,7 +46,7 @@ public class Pizza : MonoBehaviour
             {
                 print("Ingredient 1: " + ingredient.gameObject.name);
                 print("Ingredient 2: " + _orderHandler.toppingsText[i].text);
-                if ((ingredient.gameObject.name).Remove(ingredient.gameObject.name.Length - 7) == _orderHandler.toppingsText[i].text)
+                if ((ingredient.gameObject.name).Remove(ingredient.gameObject.name.Length - 7).ToLower() == _orderHandler.toppingsText[i].text.ToLower())
                 {
                     _orderHandler.toppings[i] = true;
                     print("Set topping to true");
