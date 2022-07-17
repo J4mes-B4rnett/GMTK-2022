@@ -145,10 +145,12 @@ public class Fridge : MonoBehaviour
             int sauceIndex = Random.Range(0, tempSauces.Count);
 
             GameObject sauce = Instantiate(tempSauces[sauceIndex]);
+            
 
             sauceObjects.Add(sauce);
             sauce.transform.position = slot.transform.position;
             sauce.gameObject.transform.SetParent(slot.transform);
+            sauce.transform.localScale = new Vector3(1, 1, 1);
             tempSauces.RemoveAt(sauceIndex);
         }
     }

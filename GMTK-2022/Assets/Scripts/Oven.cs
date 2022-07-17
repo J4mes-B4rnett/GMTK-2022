@@ -16,6 +16,8 @@ public class Oven : MonoBehaviour
     [SerializeField] float interactionDistance = .4f;
     [SerializeField] Pizza pizzaToppings;
     float timer = 0;
+    [SerializeField]
+    GameObject alertEx;
 
     private bool playedDing = false;
 
@@ -74,6 +76,7 @@ public class Oven : MonoBehaviour
                 {
                     playedDing = true;
                     alert.Play();
+                    alertEx.SetActive(true);
                 }
             }
 
@@ -85,6 +88,7 @@ public class Oven : MonoBehaviour
                 GameObject cookedPizza = Instantiate(pizzaToppings).gameObject;
                 cookedPizza.GetComponent<Pizza>().SetPizza(pizza);
                 chefPickup.SetNewPickup(cookedPizza);
+                alertEx.SetActive(false);
 
                 this.pizza = null;
             }
