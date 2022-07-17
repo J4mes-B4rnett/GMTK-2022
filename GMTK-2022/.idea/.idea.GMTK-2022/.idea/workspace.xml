@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Indicator_Text.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Oven.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,7 +79,7 @@
       <updated>1657921655407</updated>
       <workItem from="1657921661295" duration="3025000" />
       <workItem from="1657958060388" duration="8060000" />
-      <workItem from="1658048766328" duration="296000" />
+      <workItem from="1658048766328" duration="3187000" />
     </task>
     <servers />
   </component>
