@@ -40,8 +40,8 @@ public class Pizza : MonoBehaviour
     {
         if(ingredient.CompareTag("Topping"))
         {
-            //if (isDebugging)
-                //Debug.Log("You have added " + ingredient.gameObject.name + " to your pizza!");
+            if (isDebugging)
+                print("You have added " + ingredient.gameObject.name + " to your pizza!");
             for (int i = 0; i < _orderHandler.toppings.Count; i++)
             {
                 print("Ingredient 1: " + ingredient.gameObject.name);
