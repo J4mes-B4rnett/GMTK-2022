@@ -48,10 +48,24 @@ public class Order_Generation : MonoBehaviour
         
         if (ingredientCount > 1) // When there are multiple ingredients
         {
-            for (var i = 0; i < ingredientCount; i++)
+            int unique = 0;
+            while (unique != ingredientCount)
             {
                 newIngredient = RandomIngredient(1);
-                ingredients.Add(newIngredient);
+                int comparison = 0;
+                for (int i = 0; i < ingredients.Count; i++)
+                {
+                    if (newIngredient == ingredients[i])
+                    {
+                        comparison += 1;
+                    }
+                }
+
+                if (comparison == 0)
+                {
+                    ingredients.Add(newIngredient);
+                    unique += 1;
+                }
             }
         }
         else
