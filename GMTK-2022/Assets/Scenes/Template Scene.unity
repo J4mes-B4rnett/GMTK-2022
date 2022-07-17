@@ -2872,6 +2872,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &538682035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538682036}
+  m_Layer: 0
+  m_Name: NPC Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &538682036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538682035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.98, y: 11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567075509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,7 +5178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -6
+  m_SortingOrder: -7
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3254717, g: 1, b: 0.34801674, a: 1}
   m_FlipX: 0
@@ -6131,6 +6162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105107286}
+  - component: {fileID: 1105107287}
   m_Layer: 0
   m_Name: NPC Spawner
   m_TagString: Untagged
@@ -6153,6 +6185,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105107287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105107285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5bd4e5e5196b84ea92855ca0d17a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSpawnPoint: {fileID: 538682036}
+  spawnNewNPC: 0
+  npcs:
+  - {fileID: 4781540597884150718, guid: 6096e66d29a9f21458fa5b0fe6672d25, type: 3}
+  - {fileID: 6205032516721267946, guid: 2fc246507cc857d418d8fd20a9dfdbcd, type: 3}
+  - {fileID: 7811626744926757503, guid: 7197c6b08709f4d4c9d27715528c6726, type: 3}
+  - {fileID: 1516791323470336179, guid: bb0a637a20d54c94dabd19b9f290c0db, type: 3}
+  - {fileID: 8949906039379807647, guid: 49511079bcd8dcd4d884c44f95a9cddf, type: 3}
+  - {fileID: 578010809651624050, guid: 8f56298252de89b4998aeb8996f6b708, type: 3}
+  - {fileID: 2622939682237051700, guid: 2a11298ac5a16cc47b6be3c7fc046b72, type: 3}
+  - {fileID: 4664947995021357377, guid: a07ff89bd4ea3e54b8401a08b92e5d5b, type: 3}
 --- !u!1 &1123039056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8626,7 +8681,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_TargetDisplay: 0
 --- !u!1 &1559072519
 GameObject:

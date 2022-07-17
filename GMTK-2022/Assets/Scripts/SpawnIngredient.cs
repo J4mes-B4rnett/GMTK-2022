@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpawnIngredient : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class SpawnIngredient : MonoBehaviour
     GameObject playerHand;
     [SerializeField] GameObject spawnable;
     [SerializeField] float interactionDistance = .4f;
-
+    
+    private TextMeshProUGUI indicatorText;
 
     PickUpV2 pickup;
 
@@ -22,6 +24,8 @@ public class SpawnIngredient : MonoBehaviour
         player = GameObject.Find("Chef");
         playerHand = GameObject.Find("Pick Up Point");
         pickup = player.GetComponent<PickUpV2>();
+
+        indicatorText = GameObject.FindGameObjectsWithTag("Indicator")[0].GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -32,14 +36,21 @@ public class SpawnIngredient : MonoBehaviour
         if (isDebugging)
             OnDrawGizmos();
 
-        if(playerDistance <= interactionDistance)
+        if(playerDistance <= interactionDistance*2)
         {
+            indicatorText.text = spawnable.name;
             if(Input.GetKeyDown(KeyCode.E) && !pickup.ObjectDetected)
             {
                 if(isDebugging)
                 Debug.Log("You have spawned a(n) " + spawnable.name);
-                GameObject.FindGameObjectsWithTag("Indicator")[0].GetComponent<Indicator_Text>().indicatorText.text = spawnable.name;
                 pickup.SetNewPickup(Instantiate(spawnable));
+            }
+        }
+        else
+        {
+            if (indicatorText.text == spawnable.name)
+            {
+                indicatorText.text = "";
             }
         }
     }
