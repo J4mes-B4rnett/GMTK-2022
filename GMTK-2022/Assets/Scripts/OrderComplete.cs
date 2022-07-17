@@ -108,7 +108,11 @@ public class OrderComplete : MonoBehaviour
             GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().rentPayed += pizza.rating * 2;
             GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().NextPizza();
 
-            if (isDebugging)
+            GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime -= 60;
+            if (GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime < 0)
+                GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime = 0;
+
+                    if (isDebugging)
                 Debug.Log("Your pizza's score was " + pizza.rating + "!");
 
             GameObject temp = chefPickup.heldObject;
