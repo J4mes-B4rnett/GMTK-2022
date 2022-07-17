@@ -8,10 +8,9 @@ public class Oven : MonoBehaviour
     int pizzaCookSpeed = 5;
     [SerializeField]
     GameObject player;
-    PickUpTestScript chefPickup;
+    PickUpV2 chefPickup;
     GameObject item;
     Pizza pizza;
-    bool isFullyCooked = false;
     [SerializeField]
     bool isDebugging = false;
 
@@ -20,7 +19,7 @@ public class Oven : MonoBehaviour
     void Start()
     {
         alert = GetComponent<AudioSource>();
-        chefPickup = player.GetComponent<PickUpTestScript>();
+        chefPickup = player.GetComponent<PickUpV2>();
     }
     
     void Update()
@@ -32,11 +31,11 @@ public class Oven : MonoBehaviour
         Debug.Log("Player Distance: " + playerDistance);
 
         // if player is within range and presses space, take item
-        if(playerDistance <= 5 && Input.GetKeyDown(KeyCode.E) && chefPickup.itemHolding)
+        if(playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
         {
             // check player for held item
-            this.item = chefPickup.itemHolding;
-            chefPickup.itemHolding = null;
+            this.item = chefPickup.heldObject;
+            chefPickup.ClearOldPickup(this.item);
 
             if (isDebugging)
             Debug.Log("We have an item in the oven!");
