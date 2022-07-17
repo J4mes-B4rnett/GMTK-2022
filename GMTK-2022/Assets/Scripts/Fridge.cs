@@ -113,7 +113,9 @@ public class Fridge : MonoBehaviour
 
             foreach (GameObject prefab in saucePrefabs)
             {
-                if (sauceName.Contains(prefab.name))
+                Debug.Log(prefab.name.Substring(0, prefab.name.IndexOf(' ')));
+                Debug.Log(sauceName);
+                if (sauceName.Contains(prefab.name.Substring(0, prefab.name.IndexOf(' '))))
                 {
                     chefPickup.SetNewPickup(Instantiate(prefab));
                 }
