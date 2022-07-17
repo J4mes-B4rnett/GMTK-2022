@@ -10,11 +10,12 @@ public class NPC_Manager : MonoBehaviour
     [SerializeField] private List<GameObject> npcs;
 
     private GameObject _currentNPC;
-    
+
     void Update()
     {
         if (spawnNewNPC)
         {
+            GetComponent<AudioSource>().Play();
             Destroy(_currentNPC);
             spawnNewNPC = false;
             _currentNPC = Instantiate(npcs[Random.Range(0, npcs.Count)], npcSpawnPoint.position, Quaternion.identity);

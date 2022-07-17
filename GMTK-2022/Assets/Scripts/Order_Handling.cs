@@ -20,6 +20,11 @@ public class Order_Handling : MonoBehaviour
     public  TextMeshProUGUI sauceText;
     public List<TextMeshProUGUI> toppingsText;
 
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
+    
     void Update()
     {
         if (attribute)

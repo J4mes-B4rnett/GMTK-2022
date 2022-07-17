@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OrderComplete : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class OrderComplete : MonoBehaviour
 
     [SerializeField] float interactionDistance = 1f;
 
+    [SerializeField] private TextMeshProUGUI textTP;
+    [SerializeField] private TextMeshProUGUI textSP;
+    [SerializeField] private TextMeshProUGUI textIP;
+    [SerializeField] private TextMeshProUGUI textTR;
+    [SerializeField] private TextMeshProUGUI textTD;
+    [SerializeField] private TextMeshProUGUI textFD;
 
     [SerializeField]
     bool isDebugging = false;
@@ -38,6 +45,12 @@ public class OrderComplete : MonoBehaviour
         // Pull in order from NPC
         // Pull in ingredients on Pizza
         // Compare the two
+        textTP.text = totalPizzasCompleted.ToString();
+        textSP.text = totalSuccessfulPizzas.ToString();
+        textIP.text = (totalPizzasCompleted - totalSuccessfulPizzas).ToString();
+        textTR.text = totalRentPayed.ToString();
+        textTD.text = totalDays.ToString();
+        textFD.text = finalDifficulty.ToString();
 
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
@@ -107,13 +120,6 @@ public class OrderComplete : MonoBehaviour
 
             GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().rentPayed += pizza.rating * 2;
             GameObject.FindObjectOfType<Rent_Manager>().GetComponent<Rent_Manager>().NextPizza();
-
-            GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime -= 60;
-            if (GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime < 0)
-                GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime = 0;
-
-                    if (isDebugging)
-                Debug.Log("Your pizza's score was " + pizza.rating + "!");
 
             GameObject temp = chefPickup.heldObject;
             chefPickup.ClearOldPickup(chefPickup.heldObject);

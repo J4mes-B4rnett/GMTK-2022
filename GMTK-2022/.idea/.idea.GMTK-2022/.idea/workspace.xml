@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d8b2bc4-b03f-4519-b6e6-7e8f81885cce" name="Changes" comment="" />
+    <list default="true" id="3d8b2bc4-b03f-4519-b6e6-7e8f81885cce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTK-2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTK-2022/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/dogica SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/dogica SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Bell Pepper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Bell Pepper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Cheddar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Cheddar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Garlic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Garlic.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Parmesan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Parmesan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Pineapple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Pineapple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Hot Sauce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Hot Sauce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Peanut Butter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Peanut Butter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Alfredo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Alfredo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/BBQ.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/BBQ.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Hot Sauce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Hot Sauce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Peanut Butter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Peanut Butter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Tomato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Tomato.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/bananas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/bananas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/mushrooms.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/mushrooms.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/sweetcorn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/sweetcorn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Template Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Template Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrderComplete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrderComplete.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Order_Handling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Order_Handling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rent_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rent_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimerDecrease.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimerDecrease.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../GMTK-2022 - Copy/GMTK-2022/Assets/Scripts/OrderComplete.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Indicator_Text.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Oven.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rent_Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Restart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteEditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/ISpriteEditorModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/EditorTools/TilemapEditorTool.cs" root0="SKIP_HIGHLIGHTING" />
@@ -137,6 +164,8 @@
       <workItem from="1657921661295" duration="3025000" />
       <workItem from="1657958060388" duration="8060000" />
       <workItem from="1658048766328" duration="3187000" />
+      <workItem from="1658077498989" duration="1828000" />
+      <workItem from="1658079395639" duration="858000" />
     </task>
     <servers />
   </component>
@@ -146,6 +175,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

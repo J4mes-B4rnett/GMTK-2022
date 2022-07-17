@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using TMPro;
 
@@ -48,6 +49,8 @@ public class Rent_Manager : MonoBehaviour
     
     void IncrementDay()
     {
+        GameObject.FindObjectOfType<TimerDecrease>().GetComponent<TimerDecrease>().CurrentTime = 240f;
+        
         day += 1;
         rentPayed = 0;
         rentCost = 100 + (day * 25);

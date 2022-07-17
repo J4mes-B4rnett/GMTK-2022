@@ -27,7 +27,7 @@ public class TimerDecrease : MonoBehaviour
       }
       else
       {
-          // Game Over
+          GameObject.FindObjectOfType<GameOverManager>().GetComponent<GameOverManager>().GameOver();
       }
     }
 }

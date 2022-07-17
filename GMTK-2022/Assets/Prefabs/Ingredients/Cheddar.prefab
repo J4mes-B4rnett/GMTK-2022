@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5364912918863129905}
   - component: {fileID: -4404901668538556650}
   m_Layer: 7
-  m_Name: cheddar
+  m_Name: Cheddar
   m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
