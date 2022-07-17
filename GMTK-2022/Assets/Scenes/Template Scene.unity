@@ -189,7 +189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: mushrooms
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
   m_sharedMaterial: {fileID: -8214990982798411192, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
@@ -3733,7 +3733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: anchovies
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
   m_sharedMaterial: {fileID: -8214990982798411192, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
@@ -3941,7 +3941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: parmesan
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
   m_sharedMaterial: {fileID: -8214990982798411192, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
@@ -4220,7 +4220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ham
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
   m_sharedMaterial: {fileID: -8214990982798411192, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
@@ -6088,7 +6088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: alfredo sauce
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
   m_sharedMaterial: {fileID: -8214990982798411192, guid: 645909b7a34051e43b9c4d343aeb47ce, type: 2}
@@ -8152,7 +8152,6 @@ MonoBehaviour:
   toppings: 00000000
   sauce: 0
   attribute: 0
-  _difficulty: 4
   attributeText: {fileID: 1954677393}
   sauceText: {fileID: 1091022031}
   toppingsText:
