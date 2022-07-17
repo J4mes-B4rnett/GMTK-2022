@@ -4531,7 +4531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933455566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.136, y: 6.6289, z: 0}
+  m_LocalPosition: {x: -4.576, y: 6.421, z: 0}
   m_LocalScale: {x: 4.1481, y: 1.3821, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4578,7 +4578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -6
+  m_SortingOrder: -7
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3254717, g: 1, b: 0.34801674, a: 1}
   m_FlipX: 0
@@ -4590,6 +4590,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1032689155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032689156}
+  m_Layer: 0
+  m_Name: NPC Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1032689156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032689155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042518516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,6 +5462,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1098056708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098056710}
+  - component: {fileID: 1098056709}
+  m_Layer: 0
+  m_Name: NPC Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1098056709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098056708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5bd4e5e5196b84ea92855ca0d17a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSpawnPoint: {fileID: 1032689156}
+  spawnNewNPC: 0
+  npcs:
+  - {fileID: 4781540597884150718, guid: 6096e66d29a9f21458fa5b0fe6672d25, type: 3}
+  - {fileID: 6205032516721267946, guid: 2fc246507cc857d418d8fd20a9dfdbcd, type: 3}
+  - {fileID: 7811626744926757503, guid: 7197c6b08709f4d4c9d27715528c6726, type: 3}
+  - {fileID: 1516791323470336179, guid: bb0a637a20d54c94dabd19b9f290c0db, type: 3}
+  - {fileID: 8949906039379807647, guid: 49511079bcd8dcd4d884c44f95a9cddf, type: 3}
+  - {fileID: 578010809651624050, guid: 8f56298252de89b4998aeb8996f6b708, type: 3}
+  - {fileID: 2622939682237051700, guid: 2a11298ac5a16cc47b6be3c7fc046b72, type: 3}
+  - {fileID: 4664947995021357377, guid: a07ff89bd4ea3e54b8401a08b92e5d5b, type: 3}
+--- !u!4 &1098056710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098056708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1134700410
 GameObject:
   m_ObjectHideFlags: 0
@@ -8146,7 +8232,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777776, y: 1}
+    m_SensorSize: {x: 1.7774845, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
