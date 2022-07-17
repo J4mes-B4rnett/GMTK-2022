@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -7138492182419700633}
   - component: {fileID: 9093803914034173266}
   m_Layer: 7
-  m_Name: Pineapple
-  m_TagString: Collectible
+  m_Name: pineapple
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

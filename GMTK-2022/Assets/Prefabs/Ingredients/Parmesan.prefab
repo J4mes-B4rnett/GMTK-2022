@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8054473033223745103}
   - component: {fileID: 2916911731326968267}
   m_Layer: 7
-  m_Name: Parmesan
-  m_TagString: Collectible
+  m_Name: parmesan
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 9120532872822955344}
   - component: {fileID: 5677963992075236548}
   m_Layer: 7
-  m_Name: Mushroom
-  m_TagString: Collectible
+  m_Name: mushrooms
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

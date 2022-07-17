@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -4140649398254544409}
   - component: {fileID: 6152178300420227414}
   m_Layer: 7
-  m_Name: Hot Sauce
-  m_TagString: Collectible
+  m_Name: hot sauce
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

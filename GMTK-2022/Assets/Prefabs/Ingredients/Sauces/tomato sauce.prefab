@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -3816188620003252807}
   - component: {fileID: 4031086053546054903}
   m_Layer: 7
-  m_Name: Tomato
-  m_TagString: Collectible
+  m_Name: tomato sauce
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

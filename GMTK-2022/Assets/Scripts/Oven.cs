@@ -14,6 +14,8 @@ public class Oven : MonoBehaviour
     [SerializeField]
     bool isDebugging = false;
     [SerializeField] float interactionDistance = .4f;
+    [SerializeField] Pizza pizzaToppings;
+    float timer = 0;
 
     private AudioSource alert;
 
@@ -27,12 +29,10 @@ public class Oven : MonoBehaviour
     {
         // Get player distance
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
-
-        if (isDebugging)
-            OnDrawGizmos();
+        timer += 1 * Time.deltaTime;
 
         // if player is within range and presses space, take item
-        if(playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
+        if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
         {
             // check player for held item
             this.item = chefPickup.heldObject;
@@ -40,6 +40,7 @@ public class Oven : MonoBehaviour
 
             if (isDebugging)
             Debug.Log("We have an item in the oven!");
+            timer = 0;
         }
 
         // Check if item is pizza
@@ -49,20 +50,26 @@ public class Oven : MonoBehaviour
             {
                 this.pizza = this.item.GetComponent<Pizza>();
 
+                item = null;
+                GameObject.Destroy(this.item);
+
+
                 if (isDebugging)
                 Debug.Log("THE ITEM IS A PIZZA TOO!");
             }
             else
             {
                 // destroy item
-                this.item = null;
+                item = null;
+                GameObject.Destroy(this.item);
+
 
                 if (isDebugging)
                     Debug.Log("Ope, it wasn't a pizza. You burned it.");
             }
         }
 
-
+        Debug.Log(pizza);
         // If item is pizza, cook pizza
         if (pizza)
         {
@@ -76,6 +83,17 @@ public class Oven : MonoBehaviour
                 pizza.doneCooking = true;
                 alert.Play();
                 // Make noise, flash oven, alert player somehow
+            }
+
+            if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && !chefPickup.heldObject && timer >= .25f)
+            {
+                timer = 0;
+                // Set boxed pizza
+                GameObject cookedPizza = Instantiate(pizzaToppings).gameObject;
+                cookedPizza.GetComponent<Pizza>().SetPizza(pizza);
+                chefPickup.SetNewPickup(cookedPizza);
+
+                this.pizza = null;
             }
         }
     }
