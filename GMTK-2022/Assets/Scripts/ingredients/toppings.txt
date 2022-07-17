@@ -1,11 +1,12 @@
-﻿pepperoni
-mozzarella
-parmigiano
-chestnut mushrooms
-ham strips
+﻿pepperonis
+cheddar
+parmesan
+mushrooms
+ham
 anchovies
 bell peppers
 garlic
 pineapple
 sweetcorn
 black olives
+bananas
