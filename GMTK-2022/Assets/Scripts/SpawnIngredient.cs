@@ -28,11 +28,11 @@ public class SpawnIngredient : MonoBehaviour
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
         if(isDebugging)
-        Debug.Log("Player is " + playerDistance + " away.");
+        Debug.Log("Player is " + playerDistance + " away.\n Pickup.ObjectDetected = " + pickup.ObjectDetected);
 
         if(playerDistance <= 1)
         {
-            if(Input.GetKeyDown(KeyCode.F) && !pickup.ObjectDetected)
+            if(Input.GetKeyDown(KeyCode.E) && !pickup.ObjectDetected)
             {
                 if(isDebugging)
                 Debug.Log("You have spawned a(n) " + spawnable.name);

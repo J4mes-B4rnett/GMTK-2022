@@ -39,7 +39,7 @@ public class PickUpV2 : MonoBehaviour
                 Debug.Log("Picking up " + heldObject.name);
         }
         
-        if(isHoldingObject)
+        if(isHoldingObject && heldObject)
         {
             if(Input.GetKeyDown(KeyCode.Space) && pickupTimer >= pickupTimelimit)
             {
@@ -47,7 +47,9 @@ public class PickUpV2 : MonoBehaviour
             }
             else
             {
+                if(isDebugging && isDebuggingTime)
                 Debug.Log("Held item is " + heldObject.name + pickupTimer);
+
                 heldObject.transform.parent = PlayerTransform;
                 heldObject.transform.position = HoldPoint.position;
             }
@@ -100,7 +102,7 @@ public class PickUpV2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Collectible") && pickupTimer >= pickupTimelimit) 
+        if ((collision.gameObject.CompareTag("Collectible") || collision.gameObject.CompareTag("Topping")) && pickupTimer >= pickupTimelimit) 
         {
             heldObject = collision.gameObject;
             ObjectDetected = true;

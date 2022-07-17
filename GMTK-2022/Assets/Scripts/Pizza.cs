@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pizza : MonoBehaviour
 {
+    [Header("Debugging")]
+    [SerializeField] bool isDebugging = false;
+
     [Header("Ingredients")]
     [SerializeField] public List<string> toppings = new List<string>();
     [SerializeField] public string sauce = "";
@@ -28,5 +31,16 @@ public class Pizza : MonoBehaviour
         // order handling should handle rating system?
 
         // Oven should updated cooked property. If it goes over, start subtracting score.
+    }
+
+    public void AddIngredient(GameObject ingredient)
+    {
+        if(ingredient.CompareTag("Topping"))
+        {
+            if (isDebugging)
+                Debug.Log("You have added " + ingredient.gameObject.name + " to your pizza!");
+            this.toppings.Add(ingredient.gameObject.name.Substring(0, ingredient.gameObject.name.IndexOf('(')));
+            GameObject.Destroy(ingredient.gameObject);
+        }
     }
 }

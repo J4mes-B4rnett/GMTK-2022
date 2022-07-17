@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8796360961716629182}
   - component: {fileID: -2883616958078771318}
   m_Layer: 7
-  m_Name: Anchovies
-  m_TagString: Collectible
+  m_Name: anchovies
+  m_TagString: Topping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
