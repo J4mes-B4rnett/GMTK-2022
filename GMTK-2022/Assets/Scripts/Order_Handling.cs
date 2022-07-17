@@ -19,23 +19,51 @@ public class Order_Handling : MonoBehaviour
 
     [Header("Text properties")] 
     [SerializeField] private TextMeshProUGUI attributeText;
-    [SerializeField] private TextMeshProUGUI sauceText;
-    [SerializeField] private List<TextMeshProUGUI> toppingsText;
+    public  TextMeshProUGUI sauceText;
+    public List<TextMeshProUGUI> toppingsText;
 
     void Start()
     {
         NewOrder();
+    }
+
+    void Update()
+    {
+        if (attribute)
+        {
+            attribute = false;
+            attributeText.fontStyle ^= FontStyles.Strikethrough;
+        }
+
+        if (sauce)
+        {
+            sauce = false;
+            sauceText.fontStyle ^= FontStyles.Strikethrough;
+        }
+
+        for (int i = 0; i < toppings.Count; i++)
+        {
+            if (toppings[i])
+            {
+                toppings[i] = false;
+                toppingsText[i].fontStyle ^= FontStyles.Strikethrough;
+            }
+        }
     }
     
     void NewOrder()
     {
         order = orderGenerator.GenerateOrder(_difficulty);
 
+        attributeText.fontStyle = FontStyles.Normal;
+        sauceText.fontStyle = FontStyles.Normal;
+
         sauce = false;
         attribute = false;
         toppings = new List<bool>();
         for (int i = 0; i < Int32.Parse(order[0]); i++)
         {
+            toppingsText[i].fontStyle = FontStyles.Normal;
             toppings.Add(false);
         }
 
