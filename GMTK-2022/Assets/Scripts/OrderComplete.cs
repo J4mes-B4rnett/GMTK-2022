@@ -53,6 +53,35 @@ public class OrderComplete : MonoBehaviour
                 pizza.rating -= pizzaSaucePenalty;
             }
 
+            switch(pizza.cooked)
+            {
+                case 0:
+                    pizza.rating -= 20;
+                    break;
+                case <25:
+                    pizza.rating -= 15;
+                    break;
+                case <50:
+                    pizza.rating -= 10;
+                    break;
+                case <75:
+                    pizza.rating -= 5;
+                    break;
+                case <95:
+                    pizza.rating -= 0;
+                    break;
+               case > 150:
+                    pizza.rating -= 20;
+                    break;
+                case > 125:
+                    pizza.rating -= 12;
+                    break;
+                case >105:
+                    pizza.rating -= 5;
+                    break;
+                
+            }
+
             if(!pizza.isBoxed)
             {
                 pizza.rating -= pizzaBoxPenalty;
