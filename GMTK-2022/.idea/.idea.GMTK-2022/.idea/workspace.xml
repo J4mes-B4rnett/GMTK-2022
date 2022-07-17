@@ -4,27 +4,7 @@
     <list default="true" id="3d8b2bc4-b03f-4519-b6e6-7e8f81885cce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTK-2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTK-2022/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/dogica SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/dogica SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Bell Pepper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Bell Pepper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Cheddar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Cheddar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Garlic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Garlic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Parmesan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Parmesan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Pineapple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Pineapple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Hot Sauce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Hot Sauce.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Peanut Butter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/Peanut Butter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Alfredo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Alfredo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/BBQ.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/BBQ.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Hot Sauce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Hot Sauce.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Peanut Butter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Peanut Butter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Tomato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Sauces/UI Elements/Tomato.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/bananas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/bananas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/mushrooms.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/mushrooms.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/sweetcorn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/sweetcorn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Template Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Template Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC_Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrderComplete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrderComplete.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Order_Handling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Order_Handling.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rent_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rent_Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimerDecrease.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimerDecrease.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Order_Generation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Order_Generation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

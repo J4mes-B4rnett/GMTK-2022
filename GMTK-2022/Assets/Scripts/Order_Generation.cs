@@ -15,23 +15,38 @@ public class Order_Generation : MonoBehaviour
         {
             case 1:
             {
-                string fileName = @"Assets/Scripts/Ingredients/toppings.txt";
-                IEnumerable<string> lines = File.ReadLines(fileName);
-                Console.WriteLine(String.Join(Environment.NewLine, lines));
-                return lines.ElementAt((int)Random.Range(0, lines.Count()));
+                List<string> lines = new List<string>();
+                lines.Add("pepperonis");
+                lines.Add("cheddar");
+                lines.Add("parmesan");
+                lines.Add("mushrooms");
+                lines.Add("ham");
+                lines.Add("anchovies");
+                lines.Add("bell pepper");
+                lines.Add("garlic");
+                lines.Add("pineapple");
+                lines.Add("sweetcorn");
+                lines.Add("black olives");
+                lines.Add("bananas");
+                return lines[Random.Range(0, lines.Count())];
             }
             case 2:
             {
-                string fileName = @"Assets/Scripts/Ingredients/sauces.txt";
-                IEnumerable<string> lines = File.ReadLines(fileName);
-                Console.WriteLine(String.Join(Environment.NewLine, lines));
-                return lines.ElementAt((int)Random.Range(0, lines.Count()));
+                List<string> lines = new List<string>();
+                lines.Add("tomato sauce");
+                lines.Add("alfredo sauce");
+                lines.Add("bbq sauce");
+                lines.Add("peanut butter");
+                lines.Add("hot sauce");
+                return lines[Random.Range(0, lines.Count())];
             }
             case 3:
             {
-                string fileName = @"Assets/Scripts/Ingredients/attributes.txt";
-                IEnumerable<string> lines = File.ReadLines(fileName);
-                return lines.ElementAt((int)Random.Range(0, lines.Count()));
+                List<string> lines = new List<string>();
+                lines.Add("make it extra fast");
+                lines.Add("cook it extra hot");
+                lines.Add("cook it extra cool");
+                return lines[Random.Range(0, lines.Count())];
             }
             default: // Just in case you forget to add something here
                 return "hey_you_made_an_error";
