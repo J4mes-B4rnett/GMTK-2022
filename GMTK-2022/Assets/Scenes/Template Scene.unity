@@ -6164,7 +6164,7 @@ GameObject:
   - component: {fileID: 1105107286}
   - component: {fileID: 1105107287}
   m_Layer: 0
-  m_Name: NPC Spawner
+  m_Name: NPCSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
