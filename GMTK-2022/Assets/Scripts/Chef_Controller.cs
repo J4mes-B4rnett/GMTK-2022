@@ -39,6 +39,6 @@ public class Chef_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.MovePosition(_rb.position + movement * moveSpeed * Time.deltaTime);
+        _rb.MovePosition(_rb.position + movement * (moveSpeed * Time.deltaTime));
     }
 }
