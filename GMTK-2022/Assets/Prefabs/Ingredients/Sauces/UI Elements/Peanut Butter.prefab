@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8329408920861295929}
   - component: {fileID: 3049680586280799529}
   m_Layer: 5
-  m_Name: Peanut Butter
+  m_Name: peanut butter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
