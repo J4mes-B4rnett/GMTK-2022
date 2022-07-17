@@ -38,7 +38,7 @@ public class SpawnIngredient : MonoBehaviour
             {
                 if(isDebugging)
                 Debug.Log("You have spawned a(n) " + spawnable.name);
-
+                GameObject.FindGameObjectsWithTag("Indicator")[0].GetComponent<Indicator_Text>().indicatorText.text = spawnable.name;
                 pickup.SetNewPickup(Instantiate(spawnable));
             }
         }
