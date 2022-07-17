@@ -7,10 +7,10 @@ public class PizzaBox : MonoBehaviour
     [SerializeField]
     GameObject player;
     PickUpV2 chefPickup;
-    Pizza pizza;
     [SerializeField]
     GameObject pizzaBox;
-    Pizza boxedPizza;
+
+    [SerializeField] float interactionDistance = .4f;
 
     [SerializeField]
     bool isDebugging = false;
@@ -18,15 +18,19 @@ public class PizzaBox : MonoBehaviour
     void Start()
     {
         chefPickup = player.GetComponent<PickUpV2>();
-        boxedPizza = pizzaBox.GetComponent<Pizza>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDebugging)
+        {
+            OnDrawGizmos();
+        }
+
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
-        if (playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject && chefPickup.heldObject.GetComponent<Pizza>())
+        if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject && chefPickup.heldObject.GetComponent<Pizza>())
         {
 
             // Set boxed pizza
@@ -40,5 +44,11 @@ public class PizzaBox : MonoBehaviour
 
             chefPickup.SetNewPickup(Instantiate(pizzaBox));
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, interactionDistance);
     }
 }

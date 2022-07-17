@@ -11,6 +11,8 @@ public class SpawnIngredient : MonoBehaviour
     GameObject player;
     GameObject playerHand;
     [SerializeField] GameObject spawnable;
+    [SerializeField] float interactionDistance = .4f;
+
 
     PickUpV2 pickup;
 
@@ -27,10 +29,10 @@ public class SpawnIngredient : MonoBehaviour
     {
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
-        if(isDebugging)
-        Debug.Log("Player is " + playerDistance + " away.\n Pickup.ObjectDetected = " + pickup.ObjectDetected);
+        if (isDebugging)
+            OnDrawGizmos();
 
-        if(playerDistance <= 1)
+        if(playerDistance <= interactionDistance)
         {
             if(Input.GetKeyDown(KeyCode.E) && !pickup.ObjectDetected)
             {
@@ -40,5 +42,11 @@ public class SpawnIngredient : MonoBehaviour
                 pickup.SetNewPickup(Instantiate(spawnable));
             }
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, interactionDistance);
     }
 }

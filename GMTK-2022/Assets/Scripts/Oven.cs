@@ -13,6 +13,7 @@ public class Oven : MonoBehaviour
     Pizza pizza;
     [SerializeField]
     bool isDebugging = false;
+    [SerializeField] float interactionDistance = .4f;
 
     private AudioSource alert;
 
@@ -27,11 +28,11 @@ public class Oven : MonoBehaviour
         // Get player distance
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
-        if(isDebugging)
-        Debug.Log("Player Distance: " + playerDistance);
+        if (isDebugging)
+            OnDrawGizmos();
 
         // if player is within range and presses space, take item
-        if(playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
+        if(playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject)
         {
             // check player for held item
             this.item = chefPickup.heldObject;
@@ -77,5 +78,11 @@ public class Oven : MonoBehaviour
                 // Make noise, flash oven, alert player somehow
             }
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, interactionDistance);
     }
 }

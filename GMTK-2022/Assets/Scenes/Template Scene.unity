@@ -1323,6 +1323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 3678586870399911519, guid: 172e6602d93c92148a5ddbc98e473f09, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &260385478
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1897,6 +1898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 1867720063959262708, guid: 896efb14941f70b45af2749db3bfcfd1, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &342501704
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1974,7 +1976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367899958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55000025, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9250003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1995,7 +1997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 20350389}
   interactionDistance: 0.4
-  isDebugging: 1
+  isDebugging: 0
 --- !u!1 &368719509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,6 +2442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 1082922736305850963, guid: 4bffe60d4d8655e4aa8c4c400ee32003, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &567075512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2612,7 +2615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599756488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.39007127, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2634,6 +2637,7 @@ MonoBehaviour:
   pizzaCookSpeed: 5
   player: {fileID: 20350389}
   isDebugging: 0
+  interactionDistance: 0.4
 --- !u!1 &603436952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,7 +2915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661461415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.39007127, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2933,6 +2937,7 @@ MonoBehaviour:
   pizzaCookSpeed: 5
   player: {fileID: 20350389}
   isDebugging: 0
+  interactionDistance: 0.4
 --- !u!1 &680509601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,6 +3121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 2341431438942107755, guid: 4001cb31e00636f42bdf5ea29a64d77e, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &682394232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4161,6 +4167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 2249545906994779421, guid: 402efa6d421521a4999e9fcb14917b71, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &855787473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4261,6 +4268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 6140697711379758053, guid: 3a7c30106f7c6d046aa60d60a3b0d42b, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &890100572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5134,6 +5142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 7558673365690791043, guid: 1a5fa83d2d8cf6e4194aed7789e87a8b, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &1063033583
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5369,6 +5378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 2328265482734926986, guid: 0d69187fba7a83946a2f975eb760d105, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &1093774927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5467,6 +5477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 20350389}
   pizzaBox: {fileID: 7771238108483154510, guid: b0ec8ddc0a3780f46b43f0e95fbf54ac, type: 3}
+  interactionDistance: 0.4
   isDebugging: 0
 --- !u!1 &1137541934
 GameObject:
@@ -5711,6 +5722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 6338766190078968094, guid: 81134a31147de854fb7f717e7a689427, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &1154903119
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6064,6 +6076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 1833763300181764991, guid: a7d7f77d04512e34a950b7a99fa84143, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &1187768417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6980,6 +6993,7 @@ MonoBehaviour:
   pizzaToppingPenalty: 5
   pizzaSaucePenalty: 10
   pizzaBoxPenalty: 30
+  interactionDistance: 1
   isDebugging: 1
 --- !u!212 &1418947562
 SpriteRenderer:
@@ -7705,6 +7719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 7858025258671916387, guid: 25dfc8edfd1a8364ca9ceb275a47d18f, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &1599129816
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8019,6 +8034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 3628201107641909602, guid: e4a0a7d35abf33a488f0cb3ca41fa9e0, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &1686843931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9120,6 +9136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugging: 0
   spawnable: {fileID: 2879195462008727477, guid: ea6bf98534051824188f1fcf40410168, type: 3}
+  interactionDistance: 0.4
 --- !u!212 &2042621038
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -14,6 +14,9 @@ public class OrderComplete : MonoBehaviour
     [SerializeField] int pizzaSaucePenalty = 10;
     [SerializeField] int pizzaBoxPenalty = 30;
 
+    [SerializeField] float interactionDistance = 1f;
+
+
     [SerializeField]
     bool isDebugging = false;
     // Start is called before the first frame update
@@ -32,7 +35,7 @@ public class OrderComplete : MonoBehaviour
 
         float playerDistance = (player.transform.position - this.transform.position).magnitude;
 
-        if (playerDistance <= 1 && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject && chefPickup.heldObject.GetComponent<Pizza>())
+        if (playerDistance <= interactionDistance && Input.GetKeyDown(KeyCode.E) && chefPickup.heldObject && chefPickup.heldObject.GetComponent<Pizza>())
         {
             pizza = chefPickup.heldObject.GetComponent<Pizza>();
             // Compare to NPC order
@@ -62,5 +65,11 @@ public class OrderComplete : MonoBehaviour
             chefPickup.ClearOldPickup(chefPickup.heldObject);
             GameObject.Destroy(temp);
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, interactionDistance);
     }
 }
